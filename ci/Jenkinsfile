@@ -1,0 +1,15 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Git') {
+            steps {
+                git branch: 'main', credentialsId: 'agata_gitub', url: 'git@github.com:AgataMal/Recipes.git'
+            }
+        }
+        stage('Testuje') {
+            steps {
+                sh "cd przepisy && pytest --html=pytest_report.html"
+            }
+        }
+    }
+}
