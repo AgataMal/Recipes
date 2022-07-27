@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Testuje') {
             steps {
-                sh "cd ../server/ && pytest --html=pytest_report.html"
+                sh "cd server/ && pytest --html=pytest_report.html"
             }
         }
     }
