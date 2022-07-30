@@ -23,12 +23,13 @@
                 <img src="{{ recipe_image }}" width="300" height="300" alt="">
             </div>
             <div class="col-sm-4">
-                <h2>składniki</h2>
+                <h2>ingredients</h2>
                 <hr>
                 <ul>
-                    <li>składnik 1</li>
-                    <li>składnik 2</li>
-                    <li>składnik 3</li>
+                    {% for ingredient in ingredients %}
+                    <li>{{ ingredient }} </li>
+                    {% endfor %}
+                  
                 </ul>
             </div>
         </div>
