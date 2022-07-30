@@ -2,12 +2,13 @@
 import page_recipes 
 import page_goulash
 import page_dumplings
-from flask import Flask
+from flask import Flask, render_template
+
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return page_recipes.page_content
+    return render_template (page_recipes.template_name)
 
 @app.route('/goulash')
 def goulash():
