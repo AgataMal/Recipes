@@ -2,6 +2,7 @@
 import page_recipes 
 import page_goulash
 import page_dumplings
+import page_cheesecake
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -17,6 +18,11 @@ def goulash():
 @app.route('/dumplings')
 def dumplings():
     return page_dumplings.recipe()
+
+@app.route('/cheesecake')
+def cheesecake():
+    return page_cheesecake.recipe()
+
 
 
 if __name__ == '__main__':
