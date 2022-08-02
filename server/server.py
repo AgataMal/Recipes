@@ -9,7 +9,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template (page_recipes.template_name)
+    return render_template(page_recipes.template_name,recipies=[
+        {"recipe_name":"dumplings","recipe_path":"dumplings"},
+        {"recipe_name":"goulash","recipe_path":"goulash"},
+        {"recipe_name":"cheesecake","recipe_path":"cheesecake"}])
 
 @app.route('/goulash')
 def goulash():
@@ -22,6 +25,7 @@ def dumplings():
 @app.route('/cheesecake')
 def cheesecake():
     return page_cheesecake.recipe()
+
 
 
 

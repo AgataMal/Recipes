@@ -21,19 +21,14 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-sm-4">
-                <h3>goulash </h3>
-                <p><a href="/goulash">recipe</a></p>
-            </div>
-            <div class="col-sm-4">
-                <h3>dumplings</h3>
-                <p><a href="/dumplings">recipe</a></p>
-            </div>
-            <div class="col-sm-4">
-                <h3>cheesecake </h3>
-                <p><a href="/cheesecake">recipe</a></p>
-            </div>
-        
+            {% for recipe in recipies %}
+                <div class="col-sm-4">
+                    <h3>{{ recipe.recipe_name }} </h3>
+                    <p><a href="/{{ recipe.recipe_path }}">recipe</a></p>
+                </div>
+            {% endfor %}
+           
+    
         </div>
     </div>
 
