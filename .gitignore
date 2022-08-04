@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 server/assets/
 server/pytest_report.html
+**/assets/

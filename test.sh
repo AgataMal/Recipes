@@ -1,2 +1,2 @@
 #!/bin/bash
-cd server && pytest --html=pytest_report.html
+cd testing && pytest --html=pytest_report.html
