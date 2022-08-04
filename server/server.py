@@ -15,7 +15,7 @@ def home():
         {"recipe_name":"dumplings","recipe_path":"dumplings"},
         {"recipe_name":"goulash","recipe_path":"goulash"},
         {"recipe_name":"cheesecake","recipe_path":"cheesecake"},
-        {"recipe_name":"devolay","recipe_path":"devolay"}])
+        {"recipe_name":"devolay","recipe_path":"devolay"}],recipe_name="Recipes")
 
 
 @app.route('/goulash')
