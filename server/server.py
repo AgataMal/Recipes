@@ -4,6 +4,7 @@ import page_goulash
 import page_dumplings
 import page_cheesecake
 import page_devolay
+import page_add
 
 from flask import Flask, render_template
 
@@ -33,6 +34,10 @@ def cheesecake():
 @app.route('/devolay')
 def devolay():
     return page_devolay.recipe()
+
+@app.route('/Add')
+def add():
+    return page_add.add()  
 
 
 if __name__ == '__main__':
