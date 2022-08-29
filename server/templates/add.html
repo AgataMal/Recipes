@@ -14,6 +14,22 @@
     {% include 'navbar.html' %}
     <div class="container mt-5">
         <div class="row">   
+            <form action="/add" method="POST">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" placeholder="Recipe name" name="name" id="name">
+                </div>
+                <div class="form-group">
+                  <label for="ingredients">Ingredients:</label>
+                  <input type="text" class="form-control" placeholder="Enter Ingredients" name="ingredients" id="ingredients">
+                </div>
+                <div class="form-group">
+                    <label for="steps">steps:</label>
+                    <input type="text" class="form-control" placeholder="Enter Steps" name="steps"  id="steps">
+                  </div>
+                 
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form> 
         
         </div>
         <div class="row">
