@@ -24,11 +24,14 @@ goulash= Recipe(["meat","vegetables"],
 "Goulash")
 
 
+salad = Recipe(["stuff"], ["steps"],"https://pliki.doradcasmaku.pl/salatka-z-mixu-salat-zewy1-4.webp", "salad")
+
 recipes = {
     "cheesecake": cheesecake,
     "devolay": devolay,
     "dumplings":dumplings,
-    "goulash":goulash
+    "goulash":goulash,
+    "salad":salad
 }
 
 
