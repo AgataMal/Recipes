@@ -1,5 +1,4 @@
 from struct import pack
-import page_recipe_template
 from flask import render_template
 from model_recipe import Recipe
 
@@ -38,7 +37,7 @@ def get_recipe(recipe_name):
 def recipe(recipe_name):
     recipe = get_recipe(recipe_name)
     return render_template(
-        page_recipe_template.template_name, 
+        "recipe.html", 
         recipe_name=recipe.name, 
         recipe_image=recipe.image, 
         ingredients= recipe.ingredients,
