@@ -31,6 +31,13 @@ recipes = {
     "goulash":goulash
 }
 
+
+def get_recipe_list():
+    recipe_list = []
+    for key in recipes:
+        recipe_list.append({"recipe_name":key,"recipe_path":key})
+    return recipe_list
+
 def get_recipe(recipe_name):
     return recipes[recipe_name]
 

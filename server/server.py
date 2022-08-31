@@ -24,11 +24,7 @@ api.add_resource(RecipeResource, '/api/recipie','/api/recipe/<string:recipe_name
 
 @app.route('/')
 def home():
-    return render_template(page_recipes.template_name,recipies=[
-        {"recipe_name":"dumplings","recipe_path":"dumplings"},
-        {"recipe_name":"goulash","recipe_path":"goulash"},
-        {"recipe_name":"cheesecake","recipe_path":"cheesecake"},
-        {"recipe_name":"devolay","recipe_path":"devolay"}],recipe_name="Recipes")
+    return render_template(page_recipes.template_name,recipies=page_recipe.get_recipe_list(),recipe_name="Recipes")
 
 
 @app.route('/<string:recipe_name>')
