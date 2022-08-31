@@ -31,21 +31,9 @@ def home():
         {"recipe_name":"devolay","recipe_path":"devolay"}],recipe_name="Recipes")
 
 
-@app.route('/goulash')
-def goulash():
-    return page_recipe.recipe("goulash")
-
-@app.route('/dumplings')
-def dumplings():
-    return page_recipe.recipe("dumplings")
-
-@app.route('/cheesecake')
-def cheesecake():
-    return page_recipe.recipe("cheesecake")
-
-@app.route('/devolay')
-def devolay():
-    return page_recipe.recipe("devolay")
+@app.route('/<string:recipe_name>')
+def recipe_page(recipe_name):
+    return page_recipe.recipe(recipe_name)
 
 @app.route('/Add')
 def add():
