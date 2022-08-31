@@ -14,7 +14,7 @@ devolay= Recipe(["meat","butter","spices"],
 "devolay")
 
 dumplings= Recipe (["flavour", "eggs","water"],
-["1 step","2 step"],
+["1 step","3 step"],
 "https://www.everyday-delicious.pl/wp-content/uploads/2019/01/Potato-and-cheese-pierogi-the-american-way-%E2%80%93-homemade-cheddar-pierogi-Pierogi-ruskie-po-ameryka%C5%84sku-z-ziemniakami-i-%C5%BC%C3%B3%C5%82tym-serem-www.maine-cook.com-2.jpg",
 "dumplings")
 
@@ -24,7 +24,12 @@ goulash= Recipe(["meat","vegetables"],
 "Goulash")
 
 
-salad = Recipe(["stuff"], ["steps"],"https://pliki.doradcasmaku.pl/salatka-z-mixu-salat-zewy1-4.webp", "salad")
+salad = Recipe(
+    ["stuff"], 
+    ["stepsXXXX"],
+    "https://pliki.doradcasmaku.pl/salatka-z-mixu-salat-zewy1-4.webp", 
+    "salad"
+)
 
 recipes = {
     "cheesecake": cheesecake,
@@ -51,5 +56,5 @@ def recipe(recipe_name):
         recipe_name=recipe.name, 
         recipe_image=recipe.image, 
         ingredients= recipe.ingredients,
-        steps=goulash.steps
+        steps=recipe.steps
         )
