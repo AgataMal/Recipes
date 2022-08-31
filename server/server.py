@@ -1,14 +1,26 @@
 #!/usr/bin/env python3
 import page_recipes 
-import page_goulash
-import page_dumplings
-import page_cheesecake
-import page_devolay
 import page_add
-
-from flask import Flask, render_template
+import page_recipe
+from flask_restful import Resource, Api
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
+api = Api(app)
+
+class RecipeResource(Resource):
+    def get(self, recipe_name):
+        return page_recipe.get_recipe(recipe_name).__dict__
+
+    def post(self):
+        json_data = request.get_json(force=True)
+        print(json_data)
+        return "OK"
+
+
+
+api.add_resource(RecipeResource, '/api/recipie','/api/recipe/<string:recipe_name>')
+
 
 @app.route('/')
 def home():
@@ -21,19 +33,19 @@ def home():
 
 @app.route('/goulash')
 def goulash():
-    return page_goulash.recipe()
+    return page_recipe.recipe("goulash")
 
 @app.route('/dumplings')
 def dumplings():
-    return page_dumplings.recipe()
+    return page_recipe.recipe("dumplings")
 
 @app.route('/cheesecake')
 def cheesecake():
-    return page_cheesecake.recipe()
+    return page_recipe.recipe("cheesecake")
 
 @app.route('/devolay')
 def devolay():
-    return page_devolay.recipe()
+    return page_recipe.recipe("devolay")
 
 @app.route('/Add')
 def add():
