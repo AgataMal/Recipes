@@ -16,6 +16,9 @@ class RecipeResource(Resource):
         json_data = request.get_json(force=True)
         print(json_data)
         return "OK"
+    def delete(self, recipe_name):
+        page_recipe.delete_recipe(recipe_name)
+        return "OK"
 
 
 

@@ -49,6 +49,10 @@ def get_recipe_list():
 def get_recipe(recipe_name):
     return recipes[recipe_name]
 
+
+def delete_recipe(recipe_name):
+    del(recipes[recipe_name])
+
 def recipe(recipe_name):
     recipe = get_recipe(recipe_name)
     return render_template(
