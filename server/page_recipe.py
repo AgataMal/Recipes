@@ -49,6 +49,9 @@ def get_recipe_list():
 def get_recipe(recipe_name):
     return recipes[recipe_name]
 
+def add_recipe(recipe):
+    recipes[recipe.name]=recipe
+
 
 def delete_recipe(recipe_name):
     del(recipes[recipe_name])

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import page_add
 import page_recipe
+from model_recipe import Recipe
 from flask_restful import Resource, Api
 from flask import Flask, render_template, request
 
@@ -13,7 +14,13 @@ class RecipeResource(Resource):
 
     def post(self):
         json_data = request.get_json(force=True)
-        print(json_data)
+        new_recipe = Recipe(
+            json_data.get("ingredients"), 
+            json_data.get("steps"),
+            json_data.get("image"),
+            json_data.get("name")
+        )
+        page_recipe.add_recipe(new_recipe)
         return "OK"
     def delete(self, recipe_name):
         page_recipe.delete_recipe(recipe_name)
