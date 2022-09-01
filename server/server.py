@@ -22,6 +22,7 @@ class RecipeResource(Resource):
         )
         page_recipe.add_recipe(new_recipe)
         return "OK"
+        
     def delete(self, recipe_name):
         page_recipe.delete_recipe(recipe_name)
         return "OK"
