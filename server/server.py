@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import page_recipes 
 import page_add
 import page_recipe
 from flask_restful import Resource, Api
@@ -27,7 +26,7 @@ api.add_resource(RecipeResource, '/api/recipie','/api/recipe/<string:recipe_name
 
 @app.route('/')
 def home():
-    return render_template(page_recipes.template_name,recipies=page_recipe.get_recipe_list(),recipe_name="Recipes")
+    return render_template("recipes.html",recipies=page_recipe.get_recipe_list(),recipe_name="Recipes")
 
 
 @app.route('/<string:recipe_name>')
