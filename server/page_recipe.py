@@ -39,7 +39,6 @@ recipes = {
     "salad":salad
 }
 
-
 def get_recipe_list():
     recipe_list = []
     for key in recipes:
