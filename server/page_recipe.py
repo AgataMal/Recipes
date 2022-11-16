@@ -21,7 +21,7 @@ dumplings= Recipe (["flavour", "eggs","water"],
 goulash= Recipe(["meat","vegetables"],
 ["1 step","2 step"],
 "https://www.mojegotowanie.pl/media/cache/default_view/uploads/media/recipe/0001/100/gulasz-wieprzowy-z-szynki.jpeg",
-"Goulash")
+"goulash")
 
 
 salad = Recipe(

@@ -13,7 +13,9 @@ class TestTitle(unittest.TestCase):
         "//a[@href='/dumplings']": "dumplings",
         "//a[@href='/goulash']": "goulash",
         "//a[@href='/devolay']": "devolay",
-        "//a[@href='/cheesecake']":"cheesecake"
+        "//a[@href='/cheesecake']":"cheesecake",
+        "//a[@href='/salad']":"salad"
+
     }
 
 
@@ -38,7 +40,7 @@ class TestTitle(unittest.TestCase):
         self.assertIn(expected_value, self.driver.title)
 
         link_to_click = self.driver.find_element(By.XPATH, "//a[@href='/']")
-        sleep(1)
+        sleep(2)
         link_to_click.click()
         self.assertIn("Recipes", self.driver.title)
 
